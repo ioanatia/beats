@@ -15,5 +15,5 @@
 // specific language governing permissions and limitations
 // under the License.
 
-// Package app_search is a Metricbeat module that contains MetricSets.
-package app_search
+// Package appsearch is a Metricbeat module that contains MetricSets.
+package appsearch

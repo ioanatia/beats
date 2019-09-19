@@ -47,7 +47,7 @@ var (
 // the MetricSet for each host defined in the module's configuration. After the
 // MetricSet has been created then Fetch will begin to be called periodically.
 func init() {
-	mb.Registry.MustAddMetricSet("app_search", "stats", New,
+	mb.Registry.MustAddMetricSet("appsearch", "stats", New,
 		mb.WithHostParser(hostParser),
 		mb.DefaultMetricSet(),
 	)

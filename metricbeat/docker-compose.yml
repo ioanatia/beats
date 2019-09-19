@@ -32,9 +32,9 @@ services:
     ports:
       - 80
 
-  app_search:
+  appsearch:
     build:
-      context: ./module/app_search/_meta
+      context: ./module/appsearch/_meta
     depends_on:
       - elasticsearch
     environment:

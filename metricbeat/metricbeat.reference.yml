@@ -156,8 +156,8 @@ metricbeat.modules:
   # Password of hosts. Empty by default
   #password: password
 
-#------------------------------ App_search Module ------------------------------
-- module: app_search
+#------------------------------ Appsearch Module ------------------------------
+- module: appsearch
   metricsets: ["stats"]
   enabled: true
   period: 10s

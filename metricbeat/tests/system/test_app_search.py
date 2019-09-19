@@ -3,13 +3,13 @@ import unittest
 
 
 class Test(metricbeat.BaseTest):
-    COMPOSE_SERVICES = ['elasticsearch', 'app_search']
+    COMPOSE_SERVICES = ['elasticsearch', 'appsearch']
     COMPOSE_TIMEOUT = 600
 
     @unittest.skipUnless(metricbeat.INTEGRATION_TESTS, "integration test")
     def test_status(self):
         self.render_config_template(modules=[{
-            "name": "app_search",
+            "name": "appsearch",
             "metricsets": ["stats"],
             "hosts": ["localhost:3002"],
             "period": "5s"
@@ -24,9 +24,9 @@ class Test(metricbeat.BaseTest):
         evt = output[0]
         self.assert_fields_are_documented(evt)
 
-        self.assertIn("app_search", evt)
-        self.assertIn("stats", evt["app_search"])
+        self.assertIn("appsearch", evt)
+        self.assertIn("stats", evt["appsearch"])
 
-        app_search_stats = evt["app_search"]["stats"]
-        self.assertIn("jvm", app_search_stats)
-        self.assertIn("queues", app_search_stats)
+        appsearch_stats = evt["appsearch"]["stats"]
+        self.assertIn("jvm", appsearch_stats)
+        self.assertIn("queues", appsearch_stats)

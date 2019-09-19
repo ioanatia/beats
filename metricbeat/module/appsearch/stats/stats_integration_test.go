@@ -29,7 +29,7 @@ import (
 )
 
 func TestFetch(t *testing.T) {
-	service := compose.EnsureUp(t, "app_search")
+	service := compose.EnsureUp(t, "appsearch")
 
 	config := getConfig("stats", service.Host())
 	f := mbtest.NewReportingMetricSetV2Error(t, config)
@@ -43,7 +43,7 @@ func TestFetch(t *testing.T) {
 }
 
 func TestData(t *testing.T) {
-	service := compose.EnsureUp(t, "app_search")
+	service := compose.EnsureUp(t, "appsearch")
 
 	config := getConfig("stats", service.Host())
 
@@ -57,7 +57,7 @@ func TestData(t *testing.T) {
 // GetConfig returns config for App Search module
 func getConfig(metricset string, host string) map[string]interface{} {
 	return map[string]interface{}{
-		"module":     "app_search",
+		"module":     "appsearch",
 		"metricsets": []string{metricset},
 		"hosts":      []string{host},
 	}

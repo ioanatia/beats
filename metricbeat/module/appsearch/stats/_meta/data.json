@@ -1,6 +1,6 @@
 {
     "@timestamp": "2017-10-12T08:05:34.853Z",
-    "app_search": {
+    "appsearch": {
         "stats": {
             "jvm": {
                 "memory_usage": {
@@ -34,9 +34,9 @@
         }
     },
     "event": {
-        "dataset": "app_search.stats",
+        "dataset": "appsearch.stats",
         "duration": 115000,
-        "module": "app_search"
+        "module": "appsearch"
     },
     "metricset": {
         "name": "stats",
@@ -44,6 +44,6 @@
     },
     "service": {
         "address": "localhost:3002",
-        "type": "app_search"
+        "type": "appsearch"
     }
 }
