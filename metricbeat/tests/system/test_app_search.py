@@ -1,6 +1,7 @@
 import metricbeat
 import unittest
 
+
 class Test(metricbeat.BaseTest):
     COMPOSE_SERVICES = ['elasticsearch', 'app_search']
     COMPOSE_TIMEOUT = 600
